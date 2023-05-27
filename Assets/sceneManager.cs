@@ -22,10 +22,10 @@ public class sceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        while (!readyFlag)
-        {
-            setBattlefield();
-        }
+        //while (!readyFlag)
+       // {
+            //setBattlefield();
+        //}
     }
 
     IEnumerator setBattlefield()
