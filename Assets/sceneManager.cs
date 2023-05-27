@@ -11,9 +11,8 @@ public class sceneManager : MonoBehaviour
     [SerializeField] tankManager tankManager;
     [SerializeField] artilleryManager artilleryManager;
     [SerializeField] textManager textManager;
-    [SerializeField] Vector2 raycast = new Vector2
-    public GameObject battlefield;
-    public Camera ARcamera;
+    [SerializeField] GameObject battlefield;
+
     public ARRaycastManager raycastManager;
 
     private ARRaycastHit hit;
@@ -25,17 +24,22 @@ public class sceneManager : MonoBehaviour
     {
         while (!readyFlag)
         {
-
-            //Ray ray = ARcamera.ScreenPointToRay(new Vector3(-0.5f, -0.5f, 0.0f));
-            if (raycastManager.Raycast(ray, hit, TrackableType.Planes)
-            {
-                Pose pose= hit.pose;
-                Instantiate(battlefield, pose.position, pose.rotation);
-                readyFlag = true;
-            }
+            setBattlefield();
         }
-        
+    }
 
+    IEnumerator setBattlefield()
+    {
+        yield return new WaitForSeconds(3);
+        Vector2 rayPos = Camera.main.ViewportToScreenPoint(new Vector2(0.5f, 0.5f));
+        List<ARRaycastHit> hits = new List<ARRaycastHit>();
+        raycastManager.Raycast(rayPos, hits, TrackableType.Planes);
+        if (hits.Count > 0)
+        {
+            Pose hitpose = hits[0].pose;
+            Instantiate(battlefield, hitpose.position, hitpose.rotation);
+            readyFlag = true;
+        }
     }
 
     // Update is called once per frame
