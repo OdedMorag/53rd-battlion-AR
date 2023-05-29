@@ -9,6 +9,15 @@ public class artilleryManager : MonoBehaviour
 
     private int i;
 
+
+    private void Start()
+    {
+        //for(i =0;  i< waves.Length;  i++)
+        //    waves[i].SetActive(false);
+       // i = 0;
+    }
+
+
     public void nextWave()
     {
         waves[i].SetActive(true);
