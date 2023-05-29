@@ -49,6 +49,7 @@ public class explodingObject : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-            Gizmos.DrawSphere(transform.position, 1f);
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position, 1f);
     }
 }
