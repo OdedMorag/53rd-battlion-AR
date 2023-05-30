@@ -312,10 +312,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8586867983105370658, guid: 9c72cc26815d76e4a8ea6a82f02ec3e4,
+    - target: {fileID: 4710128282984976046, guid: 9c72cc26815d76e4a8ea6a82f02ec3e4,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -33.7
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010250424247077890, guid: 9c72cc26815d76e4a8ea6a82f02ec3e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9123490082448853350, guid: 9c72cc26815d76e4a8ea6a82f02ec3e4,
         type: 3}
@@ -703,6 +708,18 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &1610503350 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5633474562835724769, guid: 9c72cc26815d76e4a8ea6a82f02ec3e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 500361508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba9b17c2e509d340a275607d407834d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1745678548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,7 +1040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2726bcea441f5614fa833c03871a4ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankManager: {fileID: 0}
+  tankManager: {fileID: 1610503350}
   artilleryManager: {fileID: 1026322174}
   textManager: {fileID: 0}
   battlefield: {fileID: 0}
