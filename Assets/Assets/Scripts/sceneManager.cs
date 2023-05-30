@@ -22,7 +22,18 @@ public class sceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(phase1());
+    }
+
+
+    IEnumerator phase1()
+    {
+        yield return new WaitForSeconds(4);
         artilleryManager.nextWave();
+        yield return new WaitForSeconds(6);
+        tankManager.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        tankManager.advanceALL();
     }
 
     IEnumerator setBattlefield()

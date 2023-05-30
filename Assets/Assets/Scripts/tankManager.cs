@@ -5,17 +5,15 @@ using UnityEngine;
 public class tankManager : MonoBehaviour
 {
 
+    [SerializeField] mover[] tanks;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void advanceALL()
     {
-        
+        foreach(mover tank in tanks)
+        {
+            tank.Advance();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 }
