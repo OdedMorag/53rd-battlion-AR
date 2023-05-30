@@ -485,6 +485,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasOfMain
       objectReference: {fileID: 0}
+    - target: {fileID: 3936909092279330114, guid: b855349c77bcbc845a72d105d8cb02f3,
+        type: 3}
+      propertyPath: m_ScaleFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4523028923406420205, guid: b855349c77bcbc845a72d105d8cb02f3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

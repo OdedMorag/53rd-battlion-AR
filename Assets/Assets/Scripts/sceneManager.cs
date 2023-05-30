@@ -10,8 +10,9 @@ public class sceneManager : MonoBehaviour
 
     [SerializeField] tankManager tankManager;
     [SerializeField] artilleryManager artilleryManager;
-    [SerializeField] textManager textManager;
+    [SerializeField] informationTextManager textManager;
     [SerializeField] GameObject battlefield;
+    [SerializeField] recordManager recordManager;
 
     public ARRaycastManager raycastManager;
 
@@ -22,7 +23,22 @@ public class sceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(showInfoText());
+    }
+
+
+
+    IEnumerator showInfoText()
+    {
+        Debug.Log(textManager.textLen());
+        for(int i=0; i<textManager.textLen();i++)
+        {
+             yield return new WaitForSeconds(3);
+             textManager.NextText();
+        }
+        yield return new WaitForSeconds(3);
         StartCoroutine(phase1());
+
     }
 
 
@@ -33,6 +49,8 @@ public class sceneManager : MonoBehaviour
         yield return new WaitForSeconds(6);
         tankManager.gameObject.SetActive(true);
         yield return new WaitForSeconds(3);
+        recordManager.PlayAudio();
+        yield return new WaitForSeconds(75);
         tankManager.advanceALL();
     }
 
