@@ -556,20 +556,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4710128282984976046, guid: 9c72cc26815d76e4a8ea6a82f02ec3e4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010250424247077890, guid: 9c72cc26815d76e4a8ea6a82f02ec3e4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9123490082448853350, guid: 9c72cc26815d76e4a8ea6a82f02ec3e4,
         type: 3}
       propertyPath: m_Name
       value: battlefield
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123490082448853350, guid: 9c72cc26815d76e4a8ea6a82f02ec3e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1458,6 +1453,7 @@ MonoBehaviour:
   tankManager: {fileID: 1610503350}
   artilleryManager: {fileID: 1026322174}
   textManager: {fileID: 1685397669}
-  battlefield: {fileID: 0}
+  battlefield: {fileID: 9210015608363134652, guid: 407fc80a683fff64994880c0c09f2a32,
+    type: 3}
   recordManager: {fileID: 132863662}
   raycastManager: {fileID: 1035139668}

@@ -24,6 +24,7 @@ public class sceneManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(showInfoText());
+        //StartCoroutine(setBattlefield());
     }
 
 
@@ -66,6 +67,7 @@ public class sceneManager : MonoBehaviour
             Instantiate(battlefield, hitpose.position, hitpose.rotation);
             readyFlag = true;
         }
+        //StartCoroutine(showInfoText());
     }
 
     // Update is called once per frame
