@@ -22,9 +22,15 @@ public class mover : MonoBehaviour
        
     }
 
-    public void Advance()
+    public void Advance(float maxDelay, float minDelay)
     {
-        if (moveFlag == false) 
+        StartCoroutine(delayedAdvance(maxDelay, minDelay));
+    }
+
+    IEnumerator delayedAdvance(float maxDelay, float minDelay)
+    {
+        yield return new WaitForSeconds(UnityEngine.Random.Range(minDelay, maxDelay));
+        if (moveFlag == false)
             moveFlag = true;
         destination = path.GetWayPoint(waypointIndex);
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6492954650913199913}
   - component: {fileID: 6960044993512579883}
   - component: {fileID: 2002692966092652761}
+  - component: {fileID: -243036254574601382}
   m_Layer: 0
   m_Name: SmokeEffect
   m_TagString: Untagged
@@ -4606,3 +4607,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-243036254574601382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529773701600838459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b0498a53a7b8c44b3b9fd3a823d7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHight: 10
+  minHight: 6
+  maxWidth: 12
+  minWidth: 6
