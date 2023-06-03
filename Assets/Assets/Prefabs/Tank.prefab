@@ -687,4 +687,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  movmentspeed: 1
+  movmentspeed: 0.5

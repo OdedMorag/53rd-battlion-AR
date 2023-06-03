@@ -31,7 +31,6 @@ public class sceneManager : MonoBehaviour
 
     IEnumerator showInfoText()
     {
-        Debug.Log(textManager.textLen());
         for(int i=0; i<textManager.textLen();i++)
         {
              yield return new WaitForSeconds(3);
@@ -45,17 +44,21 @@ public class sceneManager : MonoBehaviour
 
     IEnumerator phase1()
     {
-        yield return new WaitForSeconds(4);
         artilleryManager.nextWave();
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(8);
         tankManager.gameObject.SetActive(true);
-        yield return new WaitForSeconds(3);
         recordManager.PlayAudio();
-        yield return new WaitForSeconds(75);
         tankManager.advanceALL();
     }
 
-    IEnumerator setBattlefield()
+    IEnumerator phase2()
+    {
+        yield return new WaitForSeconds(30);
+        artilleryManager.nextWave();
+        tankManager.advanceALL();
+    }
+
+/*    IEnumerator setBattlefield()
     {
         yield return new WaitForSeconds(3);
         Vector2 rayPos = Camera.main.ViewportToScreenPoint(new Vector2(0.5f, 0.5f));
@@ -67,8 +70,8 @@ public class sceneManager : MonoBehaviour
             Instantiate(battlefield, hitpose.position, hitpose.rotation);
             readyFlag = true;
         }
-        //StartCoroutine(showInfoText());
-    }
+        //StartCoroutine(showInfoText());*//*
+    }*/
 
     // Update is called once per frame
     void Update()
