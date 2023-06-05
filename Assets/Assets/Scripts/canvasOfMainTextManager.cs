@@ -34,7 +34,6 @@ public class canvasOfMainTextManager : MonoBehaviour
     public void ChangeLanguage()
     {
         Language language = languageManager.languageFlag;
-        Debug.Log("Selected option: " + language);
         switch (language)
         {
             case Language.Hebrew:
