@@ -17,7 +17,7 @@ public class informationTextManager : MonoBehaviour
     private int textCounter = -1;
     string[] englishTexts = { "Saturday afternoon October 1973 Yom Kippur War", "The 53rd Battalion of the 188th Brigade, under the command of Lt. Col. Oded Erez, fought to contain the Syrian army",
         "During the first day of fighting, the battery bombarded the Syrian enemy and provided supporting fire to the Israeli infantry positions.", "" };
-    string[] hebrewTexts = { "שבת אחר הצהריים אוקטובר 1973 מלחמת יום כיפור", "גדוד 53 של חטיבה 188, בפיקודו של סא\"ל עודד ארז, נלחם לבלימת הצבא הסורי",
+    string[] hebrewTexts = { "שבת אחר הצהריים אוקטובר אלף תשע מאות שבעים ושלוש מלחמת יום כיפור", "גדוד חמישים ושלוש של חטיבה מאה שמונים ושמונה, בפיקודו של סא\"ל עודד ארז, נלחם לבלימת הצבא הסורי",
         "במהלך היום הראשון ללחימה הפציצה הסוללה את האויב הסורי וסיפקה אש תומכת לעמדות החי\"ר הישראליות", "" };
 
 
