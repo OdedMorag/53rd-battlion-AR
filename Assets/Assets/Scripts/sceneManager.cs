@@ -49,6 +49,7 @@ public class sceneManager : MonoBehaviour
         tankManager.gameObject.SetActive(true);
         recordManager.PlayAudio();
         tankManager.advanceALL();
+        StartCoroutine(phase2());
     }
 
     IEnumerator phase2()
