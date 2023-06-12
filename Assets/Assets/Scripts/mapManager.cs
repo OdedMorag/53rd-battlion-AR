@@ -4,6 +4,7 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using LangugeNamespace;
 
 public class mapManager : MonoBehaviour
 {
@@ -14,17 +15,25 @@ public class mapManager : MonoBehaviour
     [SerializeField]
     private Button backButton;
     [SerializeField]
-    private TextMeshProUGUI mapName;
+    private TMP_Text mapName;
 
     private Texture texture;
     private int imgCounter = 0;
-    private Dictionary<int, string> mapNames = new Dictionary<int, string>()
+    private Dictionary<int, string> mapNamesHEB = new Dictionary<int, string>()
     {
-        { 0, "תירוסה הפיקתה" },
-        { 1, "תוחוכה"},
-        {2, "הריישה"}
+        { 0, "התקיפה הסורית" },
+        
+        { 1, "הכוחות"},
+        {2, "השיירה"}
     };
 
+    private Dictionary<int, string> mapNamesENG = new Dictionary<int, string>()
+    {
+        { 0, "The syrian attack" },
+
+        { 1, "Forces"},
+        {2, "The convoy"}
+    };
 
 
     public void ShowImage()
@@ -53,7 +62,8 @@ public class mapManager : MonoBehaviour
     {
         texture = Resources.Load<Texture>(imgCounter.ToString());
         imageToDisplay.texture = texture;
-        mapName.text = mapNames[imgCounter];
+        Language language = languageManager.languageFlag;
+        mapName.text = language == Language.English ? mapNamesENG[imgCounter] : mapNamesHEB[imgCounter];
     }
 
 }
