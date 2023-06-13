@@ -8697,6 +8697,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2062606330}
     m_Modifications:
+    - target: {fileID: 2508662596526394068, guid: 8adbc8650f64db64caf2bbf731aded65,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508662596526394068, guid: 8adbc8650f64db64caf2bbf731aded65,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508662596526394068, guid: 8adbc8650f64db64caf2bbf731aded65,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 709
+      objectReference: {fileID: 0}
     - target: {fileID: 2796404731429518957, guid: 8adbc8650f64db64caf2bbf731aded65,
         type: 3}
       propertyPath: m_fontSize
@@ -8766,6 +8781,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392121653226168823, guid: 8adbc8650f64db64caf2bbf731aded65,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392121653226168823, guid: 8adbc8650f64db64caf2bbf731aded65,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392121653226168823, guid: 8adbc8650f64db64caf2bbf731aded65,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328357209144467998, guid: 8adbc8650f64db64caf2bbf731aded65,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -171.73105
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328357209144467998, guid: 8adbc8650f64db64caf2bbf731aded65,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -116.81073
       objectReference: {fileID: 0}
     - target: {fileID: 8852251930331374662, guid: 8adbc8650f64db64caf2bbf731aded65,
         type: 3}

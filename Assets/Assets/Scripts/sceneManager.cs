@@ -33,7 +33,7 @@ public class sceneManager : MonoBehaviour
     {
         for(int i=0; i<textManager.textLen();i++)
         {
-             yield return new WaitForSeconds(3);
+             yield return new WaitForSeconds(4.5f);
              textManager.NextText();
         }
         yield return new WaitForSeconds(3);
