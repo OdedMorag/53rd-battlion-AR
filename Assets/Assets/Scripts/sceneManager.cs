@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using TextManager;
 
 public class sceneManager : MonoBehaviour
 {
@@ -30,12 +31,17 @@ public class sceneManager : MonoBehaviour
 
     IEnumerator showInfoText()
     {
-        for(int i=0; i<textManager.textLen();i++)
+        if (!informationTextManager.clickFlag)
         {
-             yield return new WaitForSeconds(4.5f);
-             textManager.NextText();
+            for (int i = 0; i < textManager.textLen(); i++)
+            {
+                yield return new WaitForSeconds(4.5f);
+                if (informationTextManager.clickFlag)
+                    break;
+                else textManager.NextText();
+            }
         }
-        yield return new WaitForSeconds(3);
+        //yield return new WaitForSeconds(3);
         StartCoroutine(phase1());
 
     }
