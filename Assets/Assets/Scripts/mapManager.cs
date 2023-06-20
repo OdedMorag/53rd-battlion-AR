@@ -11,6 +11,10 @@ public class mapManager : MonoBehaviour
     [SerializeField]
     private RawImage imageToDisplay;
     [SerializeField]
+    private Image panel;
+    [SerializeField]
+    public AudioSource record;
+    [SerializeField]
     private Button nextButton;
     [SerializeField]
     private Button backButton;
@@ -18,6 +22,7 @@ public class mapManager : MonoBehaviour
     private TMP_Text mapName;
 
     private Texture texture;
+    private bool recordFlag = false;
     private int imgCounter = 0;
     private Dictionary<int, string> mapNamesHEB = new Dictionary<int, string>()
     {
@@ -38,8 +43,30 @@ public class mapManager : MonoBehaviour
 
     public void ShowImage()
     {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            if (record.isPlaying)
+            {
+                record.Pause();
+                recordFlag = true;
+            }
+                
+        }
+        else
+        {
+            Time.timeScale = 1;
+            if(recordFlag)
+            {
+                record.Play();
+                recordFlag = false;
+            }
+
+        }
+            
         bool isImageActive = imageToDisplay.gameObject.activeSelf;
         imageToDisplay.gameObject.SetActive(!isImageActive);
+        panel.gameObject.SetActive(!isImageActive);
         ShowMap();
 
     }

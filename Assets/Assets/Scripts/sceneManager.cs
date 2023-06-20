@@ -11,7 +11,6 @@ public class sceneManager : MonoBehaviour
     [SerializeField] tankManager tankManager;
     [SerializeField] artilleryManager artilleryManager;
     [SerializeField] informationTextManager textManager;
-    [SerializeField] GameObject battlefield;
     [SerializeField] recordManager recordManager;
 
     public ARRaycastManager raycastManager;

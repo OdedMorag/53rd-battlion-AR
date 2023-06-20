@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 4710128282984976046}
+  backgroudExplosions: {fileID: 0}
 --- !u!1 &4710128282984976046
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +147,8 @@ MonoBehaviour:
   - {fileID: 2723952028614712678}
   - {fileID: 820708262735492251}
   - {fileID: 5298414986429351580}
+  maxDelayForTanks: 5
+  minDelayForTanks: 1
 --- !u!1 &9123490082448853350
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +180,7 @@ Transform:
   - {fileID: 646606607136946308}
   - {fileID: 7638177984961594466}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &770953457343323143
 PrefabInstance:
@@ -1723,21 +1726,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3496611754894809299, guid: 407fc80a683fff64994880c0c09f2a32,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3496611754894809299, guid: 407fc80a683fff64994880c0c09f2a32,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3496611754894809299, guid: 407fc80a683fff64994880c0c09f2a32,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3496611754894809299, guid: 407fc80a683fff64994880c0c09f2a32,
         type: 3}
