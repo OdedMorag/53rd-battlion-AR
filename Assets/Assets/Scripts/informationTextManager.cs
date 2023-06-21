@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using LangugeNamespace;
+using static Unity.VisualScripting.Icons;
+using Language = LangugeNamespace.Language;
 
 namespace TextManager
 {
@@ -27,7 +29,11 @@ namespace TextManager
 
         public static bool clickFlag = false;
 
-
+        private void Start()
+        {
+            Language language = languageManager.languageFlag;
+            skipButton.GetComponentInChildren<TMP_Text>().text = language == Language.English ? "skip" : "דלג";
+        }
         public int textLen()
         {
             Language language = languageManager.languageFlag;
@@ -56,7 +62,7 @@ namespace TextManager
 
         private void SetText()
         {
-            Language language = languageManager.languageFlag;
+            LangugeNamespace.Language language = languageManager.languageFlag;
             text.text = language == Language.English ? englishTexts[textCounter] : hebrewTexts[textCounter];
             skipButton.GetComponentInChildren<TMP_Text>().text = language == Language.English ? "skip" : "דלג";
         }
@@ -64,6 +70,11 @@ namespace TextManager
         public void SkipClicked()
         {
             clickFlag = !clickFlag;
+        }
+
+        public void clearText()
+        {
+            text.text = "";
         }
     }
 }

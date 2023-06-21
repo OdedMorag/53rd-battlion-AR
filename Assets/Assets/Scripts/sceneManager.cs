@@ -13,9 +13,9 @@ public class sceneManager : MonoBehaviour
     [SerializeField] artilleryManager artilleryManager;
     [SerializeField] informationTextManager textManager;
     [SerializeField] recordManager recordManager;
-
+    [SerializeField] GameObject skipButton;
     public ARRaycastManager raycastManager;
-
+    private Coroutine coINFO;
     private ARRaycastHit hit;
 
     private Boolean readyFlag = false;
@@ -23,8 +23,15 @@ public class sceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(showInfoText());
+        coINFO = StartCoroutine(showInfoText());
         //StartCoroutine(setBattlefield());
+    }
+
+    public void stopInfo()
+    {
+        textManager.clearText();
+        StopCoroutine(coINFO);
+        StartCoroutine(phase1());
     }
 
 
@@ -49,6 +56,7 @@ public class sceneManager : MonoBehaviour
 
     IEnumerator phase1()
     {
+        skipButton.SetActive(false);
         artilleryManager.nextWave();
         yield return new WaitForSeconds(8);
         tankManager.gameObject.SetActive(true);
